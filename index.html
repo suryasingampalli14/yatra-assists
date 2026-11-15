@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YATRA ASSIST – Pan-India Travel Assistance</title>
+<meta name="description" content="Flights, trains, buses, hotels and holiday planning across India. Personal booking assistance on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="container nav">
+    <a href="#top" class="logo" aria-label="Yatra Assist home"><span class="logo-mark">&#9992;</span><span class="logo-text">Yatra<b>Assist</b></span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main">
+      <a href="#top" class="active">Home</a>
+      <a href="#services" data-tab="flights">Flights</a>
+      <a href="#services" data-tab="trains">Trains</a>
+      <a href="#services" data-tab="buses">Buses</a>
+      <a href="#services" data-tab="hotels">Hotels</a>
+      <a href="#services" data-tab="trip">Travel Planning</a>
+      <a href="#emergency">Emergency Booking</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn wa" href="https://wa.me/916301661494" target="_blank" rel="noopener" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+      <a class="btn btn-gold btn-sm" href="#enquiry">Book Your Trip</a>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><i data-lucide="menu"></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-inner">
+    <span class="pill">Pan-India Travel Assistance</span>
+    <h1>Your Journey <em>Starts Here.</em></h1>
+    <p class="hero-sub">From everyday journeys to last-minute travel, YATRA ASSIST helps you explore, compare and arrange travel options across India.</p>
+    <div class="hero-cta">
+      <a href="#enquiry" class="btn btn-gold">Plan My Journey <i data-lucide="arrow-right"></i></a>
+      <a href="#emergency" class="btn btn-ghost"><i data-lucide="siren"></i> Need Emergency Travel?</a>
+    </div>
+    <ul class="hero-links"><li>Flights</li><li>Trains</li><li>Buses</li><li>Hotels</li><li>Holiday Planning</li></ul>
+    <p class="hero-note"><i data-lucide="shield-check"></i> Personal booking assistance on WhatsApp — no fake search results, no hidden charges.</p>
+  </div>
+</section>
+
+<!-- ============ ENQUIRY FORM ============ -->
+<section class="enquiry-wrap" id="enquiry">
+  <div class="container narrow">
+    <div class="form-card">
+      <div class="form-head">
+        <div>
+          <h2>Where to, traveller?</h2>
+          <p>Tell us your plan — our team replies on WhatsApp with practical options.</p>
+        </div>
+        <span class="tag">Booking Enquiry</span>
+      </div>
+
+      <div class="tabs" role="tablist" id="tabs"></div>
+
+      <form id="enquiryForm" novalidate>
+        <div class="grid" id="fields"></div>
+
+        <div class="grid">
+          <label class="field full">
+            <span>WhatsApp Number *</span>
+            <div class="phone-row">
+              <span class="cc">+91</span>
+              <input type="tel" name="mobile" id="mobile" inputmode="numeric" autocomplete="tel-national" placeholder="10-digit mobile number" maxlength="10" required>
+            </div>
+            <small class="err" data-err="mobile"></small>
+          </label>
+        </div>
+
+        <p class="fine" id="tabNote" hidden></p>
+
+        <div class="info-box"><i data-lucide="info"></i>
+          <span>This is a <b>booking enquiry</b> — not a live ticket search. Our team personally checks options through authorized channels and replies on WhatsApp with fares &amp; availability. No payment is taken on this website.</span>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block" id="submitBtn"><i data-lucide="message-circle"></i> <span>Submit Enquiry on WhatsApp</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        <p class="fine center">By submitting, you agree to be contacted on WhatsApp about this enquiry.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What We Do</span>
+      <h2>Every Way to Travel, One Helpful Team</h2>
+      <p>Pick a service and tell us your plan — we'll take it from there.</p>
+    </div>
+    <div class="cards-3">
+      <article class="svc" style="--img:linear-gradient(135deg,#2b4a7a,#0e1a33)">
+        <div class="svc-img"><span class="svc-ico"><i data-lucide="plane"></i></span></div>
+        <div class="svc-body"><h3>Flight Bookings</h3>
+          <p>Domestic flight reservations, fare comparisons, connecting flights, group bookings and rescheduling assistance.</p>
+          <ul><li>Domestic reservations &amp; fare comparison</li><li>Connecting-flight routing</li><li>Group bookings</li></ul></div>
+        <button class="btn btn-outline btn-block" data-open="flights">Enquire Now <i data-lucide="arrow-right"></i></button>
+      </article>
+      <article class="svc" style="--img:linear-gradient(135deg,#3a5a3f,#0f1f18)">
+        <div class="svc-img"><span class="svc-ico"><i data-lucide="train-front"></i></span></div>
+        <div class="svc-body"><h3>Train Bookings</h3>
+          <p>Train booking assistance, availability checking through authorized channels, alternative routes and Tatkal booking assistance subject to railway rules and live availability.</p>
+          <ul><li>Availability checks via authorized channels</li><li>Alternative route suggestions</li><li>Tatkal guidance — railway rules apply</li></ul></div>
+        <button class="btn btn-outline btn-block" data-open="trains">Enquire Now <i data-lucide="arrow-right"></i></button>
+      </article>
+      <article class="svc" style="--img:linear-gradient(135deg,#7a4a2b,#2a1608)">
+        <div class="svc-img"><span class="svc-ico"><i data-lucide="bus"></i></span></div>
+        <div class="svc-body"><h3>Bus Bookings</h3>
+          <p>AC, non-AC, sleeper, seater, private operators and intercity travel across every Indian state.</p>
+          <ul><li>AC &amp; non-AC coaches</li><li>Sleeper &amp; seater options</li><li>Private operators</li></ul></div>
+        <button class="btn btn-outline btn-block" data-open="buses">Enquire Now <i data-lucide="arrow-right"></i></button>
+      </article>
+      <article class="svc" style="--img:linear-gradient(135deg,#6b5a3a,#241b0d)">
+        <div class="svc-img"><span class="svc-ico"><i data-lucide="bed-double"></i></span></div>
+        <div class="svc-body"><h3>Hotel Bookings</h3>
+          <p>Budget stays, premium hotels, family accommodation and business stays — matched to your budget and location.</p>
+          <ul><li>Budget to premium stays</li><li>Family accommodation</li><li>Business stays</li></ul></div>
+        <button class="btn btn-outline btn-block" data-open="hotels">Enquire Now <i data-lucide="arrow-right"></i></button>
+      </article>
+      <article class="svc" style="--img:linear-gradient(135deg,#1f6f8b,#0b2a3a)">
+        <div class="svc-img"><span class="svc-ico"><i data-lucide="user-round"></i></span></div>
+        <div class="svc-body"><h3>Complete Travel Planning</h3>
+          <p>Family holidays, temple tours, pilgrimage journeys, business travel, honeymoon trips and multi-city itineraries.</p>
+          <ul><li>Family holidays &amp; temple tours</li><li>Pilgrimage journeys</li><li>Honeymoon &amp; business travel</li></ul></div>
+        <button class="btn btn-outline btn-block" data-open="trip">Enquire Now <i data-lucide="arrow-right"></i></button>
+      </article>
+      <article class="svc" style="--img:linear-gradient(135deg,#4a6d8c,#14283b)">
+        <div class="svc-img"><span class="svc-ico"><i data-lucide="siren"></i></span></div>
+        <div class="svc-body"><h3>Emergency Travel Assistance</h3>
+          <p>Urgent travel enquiries, same-day and last-minute travel options, alternative routes and booking coordination.</p>
+          <ul><li>Same-day &amp; last-minute options</li><li>Alternative routes</li><li>Booking coordination</li></ul></div>
+        <a class="btn btn-outline btn-block" href="#emergency">Enquire Now <i data-lucide="arrow-right"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE ============ -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Why Choose Yatra Assist</span>
+      <h2>Travel Help You Can Actually Rely On</h2>
+      <p>Built for real Indian journeys — everyday commutes, family holidays and emergencies alike.</p>
+    </div>
+    <div class="cards-3 why">
+      <div class="why-item"><i data-lucide="scale"></i><div><h4>Compare Practical Options</h4><p>We line up real, workable choices across flights, trains, buses and stays — not endless lists.</p></div></div>
+      <div class="why-item"><i data-lucide="user-check"></i><div><h4>Personal Booking Assistance</h4><p>A dedicated human coordinator guides every enquiry, from hello to boarding pass.</p></div></div>
+      <div class="why-item"><i data-lucide="map-pin"></i><div><h4>Travel Planning Across India</h4><p>Anywhere in India to anywhere in India — one team for the whole route.</p></div></div>
+      <div class="why-item"><i data-lucide="layers"></i><div><h4>Multiple Transport Options</h4><p>Flights, trains, buses and hotels compared side by side for your dates.</p></div></div>
+      <div class="why-item"><i data-lucide="zap"></i><div><h4>Assistance With Urgent Travel</h4><p>Same-day and last-minute journeys handled with priority and care.</p></div></div>
+      <div class="why-item"><i data-lucide="indian-rupee"></i><div><h4>Transparent Pricing &amp; Fees</h4><p>Clear service fees shared upfront — no surprises after you confirm.</p></div></div>
+      <div class="why-item"><i data-lucide="headphones"></i><div><h4>Support Throughout Booking</h4><p>We stay reachable through booking, changes and your journey itself.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EMERGENCY ============ -->
+<section class="dark-band" id="emergency">
+  <div class="container">
+    <div class="urgent">
+      <div>
+        <span class="pill pill-sm"><i data-lucide="lock"></i> Urgent Travel Desk</span>
+        <h2>Need to Travel Urgently?</h2>
+        <p>Unexpected plans? Family emergencies? Last-minute journeys? Tell us where you need to go. Our team will help you explore available travel options.</p>
+        <ul class="ticks"><li>Same-day &amp; last-minute travel options</li><li>Alternative routes when plans collapse</li><li>Booking coordination, end to end</li></ul>
+        <div class="row-btns">
+          <a class="btn btn-gold" href="https://wa.me/916301661494?text=Hi%20Yatra%20Assist%2C%20I%20need%20urgent%20travel%20assistance." target="_blank" rel="noopener"><i data-lucide="siren"></i> Get Urgent Travel Assistance</a>
+          <a class="btn btn-ghost" href="tel:+916301661494"><i data-lucide="phone"></i> +91 63016 61494</a>
+        </div>
+      </div>
+      <aside class="urgent-card">
+        <h3>To help you fastest, include:</h3>
+        <ol class="num"><li>From → To route</li><li>Travel date &amp; time</li><li>Number of passengers</li><li>Preferred mode — flight, train or bus</li></ol>
+        <p class="fine">Priority handling during working hours — 6:00 AM – 12:00 AM, every day. For emergencies outside these hours, message us on WhatsApp and we'll respond as soon as the desk opens.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TATKAL ============ -->
+<section class="section">
+  <div class="container tatkal">
+    <div>
+      <span class="eyebrow">Tatkal Assistance</span>
+      <h2>Train Tickets at the Last Minute?</h2>
+      <p>Need help with Tatkal booking? YATRA ASSIST can guide you through the permitted booking process using authorized channels, subject to railway rules and actual availability.</p>
+      <div class="promise"><b>Our honest promise:</b> Tatkal seats are limited and confirmation is decided solely by Indian Railways. We never promise confirmed berths or guaranteed availability — only permitted-process assistance through authorized channels.</div>
+      <div class="row-btns">
+        <a class="btn btn-navy" href="https://wa.me/916301661494?text=Hi%20Yatra%20Assist%2C%20I%20need%20Tatkal%20assistance." target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Enquire for Tatkal Assistance</a>
+        <button class="btn btn-outline" data-open="trains"><i data-lucide="ticket"></i> Train Booking Help</button>
+      </div>
+    </div>
+    <aside class="tatkal-card">
+      <h3><i data-lucide="alarm-clock"></i> Keep this ready for a fast Tatkal enquiry</h3>
+      <ol class="num"><li>Train number or route</li><li>Travel date</li><li>Passenger count &amp; coach preference</li><li>ID details (as per railway rules)</li></ol>
+      <p class="hint">Tatkal quotas open and fill within minutes. Message us the moment plans change — the earlier we start, the more options we can realistically check for you.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section alt">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How It Works</span>
+      <h2>From Enquiry to Confirmation, in Four Steps</h2>
+      <p>No apps to download, no payment walls — just a conversation that gets your journey booked.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">01</span><i data-lucide="clipboard-list"></i><h4>Share Your Travel Details</h4><p>Send your route, dates and travellers through the enquiry form or WhatsApp.</p></div>
+      <div class="step"><span class="n">02</span><i data-lucide="compass"></i><h4>Explore Available Options</h4><p>We check practical options across flights, trains, buses and stays.</p></div>
+      <div class="step"><span class="n">03</span><i data-lucide="circle-check"></i><h4>Confirm Your Preferred Journey</h4><p>Pick your favourite — we coordinate the booking with you, step by step.</p></div>
+      <div class="step"><span class="n">04</span><i data-lucide="mail-check"></i><h4>Receive Your Booking Confirmation</h4><p>Get confirmed details on WhatsApp, with support right up to departure.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESTINATIONS ============ -->
+<section class="section" id="destinations">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Popular Destinations</span>
+      <h2>Where Will You Go Next?</h2>
+      <p>Tap a destination and we'll start planning your trip on WhatsApp.</p>
+    </div>
+    <div class="dest-grid" id="destGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="dark-band contact" id="contact">
+  <div class="container narrow-2 center">
+    <span class="eyebrow">Contact Us</span>
+    <h2>Let's Plan Your Next Journey.</h2>
+    <p class="lead">Message us on WhatsApp, call, email or follow on Instagram — we reply during working hours, every day.</p>
+    <div class="contact-grid">
+      <a class="c-tile" href="https://wa.me/916301661494" target="_blank" rel="noopener"><i data-lucide="message-circle" class="g"></i><div><small>WhatsApp</small><b>+91 63016 61494</b><span>Fastest reply</span></div></a>
+      <a class="c-tile" href="tel:+916301661494"><i data-lucide="phone" class="y"></i><div><small>Business Phone</small><b>+91 63016 61494</b><span>Tap to call</span></div></a>
+      <a class="c-tile" href="mailto:support.yatraassist@gmail.com"><i data-lucide="mail" class="y"></i><div><small>Business Email</small><b>support.yatraassist@gmail.com</b><span>We reply within a day</span></div></a>
+      <a class="c-tile" href="https://instagram.com/yatra_assist" target="_blank" rel="noopener"><i data-lucide="instagram" class="b"></i><div><small>Instagram</small><b>@yatra_assist</b><span>Travel ideas &amp; updates</span></div></a>
+      <div class="c-tile"><i data-lucide="clock" class="y"></i><div><small>Operating Hours</small><b>6:00 AM – 12:00 AM, every day</b><span>Including holidays</span></div></div>
+      <div class="c-tile"><i data-lucide="map-pin" class="b"></i><div><small>Service Coverage</small><b>Across India</b><span>Any city to any city</span></div></div>
+    </div>
+    <a class="btn btn-wa" href="https://wa.me/916301661494" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> Chat With Us on WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container foot-grid">
+    <div>
+      <a href="#top" class="logo"><span class="logo-mark">&#9992;</span><span class="logo-text">Yatra<b>Assist</b></span></a>
+      <p class="foot-about">Your Travel. Our Assistance. Premium, personal booking help — from anywhere in India to anywhere in India.</p>
+      <div class="socials"><a href="https://instagram.com/yatra_assist" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a><a href="https://wa.me/916301661494" target="_blank" rel="noopener" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a></div>
+    </div>
+    <div><h5>Quick Links</h5><a href="#top">Home</a><a href="#contact">Contact Us</a><a href="#enquiry">Book Your Trip</a><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cancellation &amp; Refund Policy</a></div>
+    <div><h5>Our Services</h5><a href="#services">Flight Bookings</a><a href="#services">Train Bookings</a><a href="#services">Bus Bookings</a><a href="#services">Hotel Bookings</a><a href="#services">Complete Travel Planning</a><a href="#emergency">Emergency Travel Assistance</a></div>
+    <div><h5>Contact</h5>
+      <p><i data-lucide="phone"></i><span>+91 63016 61494<small>Business phone — tap to call</small></span></p>
+      <p><i data-lucide="message-circle"></i><span>WhatsApp chat — fastest reply</span></p>
+      <p><i data-lucide="mail"></i><span>support.yatraassist@gmail.com</span></p>
+      <p><i data-lucide="clock"></i><span>6:00 AM – 12:00 AM, every day</span></p>
+      <p><i data-lucide="map-pin"></i><span>Across India — anywhere in India to anywhere in India</span></p>
+    </div>
+  </div>
+  <div class="container copy">© <span id="yr"></span> YATRA ASSIST. All rights reserved.</div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://unpkg.com/lucide@0.263.1/dist/umd/lucide.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
